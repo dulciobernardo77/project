@@ -12,23 +12,21 @@
     </header>
     <section>
         <div>
-            <span>Ano de Nascimento</span>
-            <input type="text" name="txtn" id="txtn">
-            <br>
-            <br>
-            <label for="Sexo">Sexo:</label>
-            <input type="radio" id="masculino" name="genero" value="masculino">
-            <label for="masculino">Masculino</label>
-            <input type="radio" id="feminino" name="genero" value="feminino">
-            <label for="feminino">Feminino</label>
-            <br>
-            <br>
-
-            <input type="button" value="verificar" onclick="click()">
-            <p>prencha os dados acima para ver o resultado!</p>
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" id="mas" name="radsex" >
+                <label for="mas">Masculino</label>
+                <input type="radio" id="fem" name="radsex">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="verificar" onclick="verificar()">
+            </p>
         </div>
-        <div>
-            <img src="img/4anosmen.png" alt="">
+        <div id="res">
+            prencha os dados acima para ver o resultado!
         </div>
     </section>
     <footer>
