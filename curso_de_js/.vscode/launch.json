@@ -1,0 +1,13 @@
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Iniciar com argumentos",
+  "program": "${workspaceFolder}/app.js",
+  "args": ["arg1", "arg2"],         // Argumentos do programa
+  "env": {                          // Variáveis de ambiente
+    "NODE_ENV": "development",
+    "API_KEY": "minha-chave-api"
+  },
+  "cwd": "${workspaceFolder}/src",  // Diretório de trabalho atual
+  "console": "integratedTerminal"   // Usar terminal integrado
+}
