@@ -1,8 +1,6 @@
-let n = 0;
+var n = 3;
 
-do {
-    if (n % 2 == 0) {
-        console.log(n);
-    }
+while (n < 10) {
+    console.log(`${n} X 10 = `);
     n++;
-} while (n <= 10);
+}
