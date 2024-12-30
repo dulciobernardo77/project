@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: lightgray;
+    font: normal 15pt arial;
+}
+section {
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    h1 {
+        text-align: center;
+    }
+    input[type='button'] {
+        width: 400px;
+        padding: 13px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background-color: #020c81;
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    input[type='button']:hover {
+        background-color: #020c40;
+        transition: all 0.4s;
+    }
+    input[type='number'] {
+        width: 385px;
+        padding: 5px;
+    }
+}
