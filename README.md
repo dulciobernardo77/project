@@ -3,7 +3,7 @@
 Este arquivo README foi criado para organizar e estruturar os conceitos e práticas essenciais necessários para dominar a linguagem JavaScript. Use-o como um guia prático durante sua jornada de aprendizado, garantindo progresso consistente e eficiente.
 ---
 
-## Estrutura do Estudo
+#### Estrutura do Estudo
 
 1. **Fundamentos do JavaScript**
    - O que é JavaScript e como funciona
