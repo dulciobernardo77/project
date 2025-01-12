@@ -1,11 +1,13 @@
-let nome = 'Super Man';
-let idade = '100';
-let poder = 'Super Forca';
+let nome = 'Dulcio Bernardo';
+let idade = 22;
+let poder = 'super Forca';
 
-nome = 'Batman';
-poder = 'Rico';
+nome = "Batman";
+poder = "Rico"
+
 console.log(`
-        Nome:${nome}
-        Idade:${idade}
-        Poder:${poder}
-  `);
+    Nome:${nome}
+    Idade:${idade}
+    Poder:${poder}
+    
+    `); 

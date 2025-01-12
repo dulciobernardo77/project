@@ -1,3 +1,4 @@
+//
 function NumeroNegativos (number){
 	let counter = 0;
 
