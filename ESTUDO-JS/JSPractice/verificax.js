@@ -1,9 +1,9 @@
-let x = 10;
+let x = 100;
 //4. Crie uma condição que verifica se um número armazenado em x é menor que 100.
 
 if(x < 100){
-	return true;
+	console.log('menor');
 }else{
-	return false
+	console.log('maior');
 }
 
