@@ -1,10 +1,10 @@
 //21. Verifique se uma senha (string) tem pelo menos 8 caracteres e contém o caractere "@".
 
-let Passworld = "Asadegalinha1";
+let Passworld = "Asadegalinha1@";
 
-for(let counter = 0; Passworld.length;counter++){
 
-	if(Passworld.length >= 8 || Passworld[counter] === '@'){
+
+	if(Passworld.length >= 8 && Passworld.match(/@/)){
 		console.log(
 			'Passworld permitida'
 		);
@@ -13,4 +13,4 @@ for(let counter = 0; Passworld.length;counter++){
 	else{
 		console.log('nao permitida');
 	}
-}
+

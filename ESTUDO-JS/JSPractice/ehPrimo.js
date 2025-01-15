@@ -23,7 +23,7 @@ for(counter = 0 ; counter * counter <= number; counter++){
         console.log(`O ${number} nao e primo`);
     }
     else{
-        console.log(`O ${number} e primo`);E
+        console.log(`O ${number} e primo`);
         break;
     }
 }

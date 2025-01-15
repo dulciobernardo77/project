@@ -1,6 +1,6 @@
 //15. Teste se uma string contém a letra "a" usando o método .includes().
 
-let array = ['a'];
+let array = 'ana';
 
 console.log(
     array.includes('a')
