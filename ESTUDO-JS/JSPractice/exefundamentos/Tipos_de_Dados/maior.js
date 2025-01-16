@@ -1,10 +1,10 @@
 //Determine o tipo de dado de uma variável usando typeof.
 
 function MaiorNumero(number1,number2){
-	if(number1 < number2){
-		console.log("O primeiro e maior");	
+	if(number1 > number2){
+		console.log(number1);	
 	}else{
-		console.log("O segundo e maior");
+		console.log(number2);
 	}
 }
 MaiorNumero(3,6);
