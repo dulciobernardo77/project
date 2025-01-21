@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard TCC</title>
+    <style>
+        /* Reset e variáveis */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        :root {
+            --bg-dark: #18181b;
+            --bg-card: #27272a;
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent: #10b981;
+            --border: #3f3f46;
+            --hover: #4b5563;
+        }
+
+        /* Estilos base */
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+        }
+
+        .deadline {
+            text-align: right;
+        }
+
+        .deadline-days {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Grid de status */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .status-card:hover {
+            border-color: var(--accent);
+        }
+
+        .status-value {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Progress bars */
+        .progress-container {
+            margin-top: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        /* Main grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin-top: 1rem;
+        }
+
+        .timeline-item {
+            padding: 1rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lista de documentos */
+        .doc-list {
+            list-style: none;
+        }
+
+        .doc-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .status-completed {
+            background: #10b981;
+        }
+
+        .status-progress {
+            background: #f59e0b;
+        }
+
+        .status-pending {
+            background: var(--text-secondary);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .deadline {
+                text-align: center;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div>
+                    <h1 class="project-title">Sistema de Gestão Acadêmica</h1>
+                    <p class="text-secondary">TCC - 2024</p>
+                </div>
+                <div class="deadline">
+                    <div class="deadline-days">147 dias</div>
+                    <div class="status-label">até a entrega final</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Status Grid -->
+        <div class="status-grid">
+            <div class="status-card">
+                <div class="status-value">65%</div>
+                <div class="status-label">Progresso Geral</div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-card">
+                <div class="status-value">45</div>
+                <div class="status-label">Páginas Documentadas</div>
+            </div>
+
+            <div class="status-card">
+                <div class="status-value">156</div>
+                <div class="status-label">Total de Commits</div>
+            </div>
+
+            <div class="status-card">
+                <div class="status-value">25/01</div>
+                <div class="status-label">Próxima Reunião</div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Cronograma -->
+            <div class="card">
+                <h2 class="card-title">Cronograma e Milestones</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span>Revisão Bibliográfica</span>
+                            <span style="color: var(--accent)">100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span>Desenvolvimento</span>
+                            <span style="color: var(--accent)">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span>Testes</span>
+                            <span style="color: var(--accent)">30%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Documentação -->
+            <div class="card">
+                <h2 class="card-title">Documentação</h2>
+                <ul class="doc-list">
+                    <li class="doc-item">
+                        <div style="display: flex; align-items: center;">
+                            <div class="status-dot status-completed"></div>
+                            <span>Introdução</span>
+                        </div>
+                        <span style="color: var(--accent)">15 págs</span>
+                    </li>
+                    <li class="doc-item">
+                        <div style="display: flex; align-items: center;">
+                            <div class="status-dot status-completed"></div>
+                            <span>Revisão Bibliográfica</span>
+                        </div>
+                        <span style="color: var(--accent)">20 págs</span>
+                    </li>
+                    <li class="doc-item">
+                        <div style="display: flex; align-items: center;">
+                            <div class="status-dot status-progress"></div>
+                            <span>Metodologia</span>
+                        </div>
+                        <span style="color: var(--accent)">10 págs</span>
+                    </li>
+                    <li class="doc-item">
+                        <div style="display: flex; align-items: center;">
+                            <div class="status-dot status-pending"></div>
+                            <span>Resultados</span>
+                        </div>
+                        <span style="color: var(--accent)">0 págs</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Orientação -->
+            <div class="card">
+                <h2 class="card-title">Orientação</h2>
+                <div style="background: var(--bg-dark); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                    <div style="color: var(--accent); margin-bottom: 0.5rem;">Orientador</div>
+                    <div>Prof. Dr. João Silva</div>
+                </div>
+                <div>
+                    <h3 style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 0.5rem;">
+                        Próximas Atividades:
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div style="color: var(--accent)">25/01</div>
+                            <div>Revisão do Capítulo 3</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div style="color: var(--accent)">01/02</div>
+                            <div>Apresentação Parcial</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
