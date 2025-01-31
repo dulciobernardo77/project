@@ -94,7 +94,7 @@ let num = [10, 20, 30, 40, 50];
 
 //Crie um array de números e filtre apenas os maiores que 10.
 
-let numarray =[1,2,3,4,5,20,48];
+/*let numarray =[1,2,3,4,5,20,48];
 
 let double = numarray.map(function(doub){
         return doub*2;
@@ -103,3 +103,11 @@ let double = numarray.map(function(doub){
 console.log(double);
 
 
+//
+
+let number =[1,2,3,4,5];
+
+let str = number.map(function(string){
+    return string.toString();
+});
+console.log(str);*/
