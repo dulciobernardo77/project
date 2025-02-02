@@ -111,3 +111,62 @@ let str = number.map(function(string){
     return string.toString();
 });
 console.log(str);*/
+
+///const nomes = ["Carlos", "Ana", "Pedro"];
+// Saída esperada: ["Sr./Sra. Carlos", "Sr./Sra. Ana", "Sr./Sra. Pedro"]
+
+
+//const nomes = ["Carlo", "Ana", "pedro"];
+
+//const nomeprex = nomes.map(function(nome){
+//    return `Sr./Sra. ${nome}`
+//});
+
+//console.log(nomeprex);
+
+//const palavras = ["olá", "mundo", "javascript"];
+// Saída esperada: ["OLÁ", "MUNDO", "JAVASCRIPT"]
+
+//const palavras = ["ola","mundo","javascript"];
+
+//const PALAVRAS = palavras.map(function(string){
+//  return string.toUpperCase();
+//});
+
+//console.log(PALAVRAS);
+
+
+//const nomes = ["Alice", "Bruno", "Camila"];
+// Saída esperada: [{ nome: "Alice" }, { nome: "Bruno" }, { nome: "Camila" }]
+
+//const nomes = ["Alice","Bruno","Camila"];
+
+//const objtes =nomes.map(function(subnome){
+//        return `{ nome: "${subnome}" }`;
+//});
+
+//console.log(objtes);
+
+//const numeros = [3, 4, 5];
+// Saída esperada: [9, 16, 25]
+
+///const numeros = [3, 4, 5];
+
+//console.log(numeros);
+//const auquadrado = numeros.map(function(elevado){
+ //       return elevado**2;
+//});
+
+//console.log(auquadrado);
+
+
+//const precos = [5, 12.5, 30, 99.99];
+// Saída esperada: ["R$ 5.00", "R$ 12.50", "R$ 30.00", "R$ 99.99"]
+
+const precos = [5,12.5,30,99.99];
+
+const decimal = precos.map(function(float){
+        return `R$ ${float.toFixed(2)}`;
+});
+
+console.log(decimal)
