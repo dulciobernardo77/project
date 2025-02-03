@@ -63,3 +63,4 @@ function numero_maior(array){
 }
 let numeros = [1,2,3,4,5,6,7];
 console.log(numero_maior(numeros));
+const novoArray = arrayOriginal.filter(callback(elemento, índice, array));
