@@ -48,20 +48,3 @@ function invert_array(array){
 }
 let numero = [1,2,3,4,5,6,7];
 invert_array(numero);
-
-function numero_maior(array){
-    if(array == null){
-        console.log(`array invalido`);
-    }else{
-        let maior = array[0];
-        for(numero = 0; numero <= array.length;numero++){
-            if(numero > maior);
-                maior = numero;
-            return maior;
-        }
-    }
-}
-let numeros = [1,2,3,4,5,6,7];
-console.log(numero_maior(numeros));
-const novoArray = arrayOriginal.filter(callback(elemento, índice, array));
-c
