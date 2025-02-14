@@ -25,13 +25,14 @@ console.log(array1.sort());*/
 
 
 function numero_de_vogais(){
-    let str = 'asadegalinha1'
+    let str = 'asa'
     let vogais = "aeiou";
     let total = 0;
-    for(let counter = 0 ; counter <= str.length;counter++){
-    if(str[counter] == vogais){
-        total += str[counter](vogais);
+    for(let counter = 0 ; counter < str.length;counter++){
+        if(vogais.includes(str[counter])){
+            total++;
         }
     }
+    return total;
 }
 console.log(numero_de_vogais());
