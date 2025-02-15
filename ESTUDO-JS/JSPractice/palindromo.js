@@ -4,4 +4,11 @@
 // Exemplo: "radar", "ovo" e "arara" são palíndromos.
 
 
-//se str[loop]
+//se str[loopx]  === str[loopy
+
+
+
+
+
+
+//Escrever uma função que simula uma calculadora (soma, subtração, multiplicação e divisão).]

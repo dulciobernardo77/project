@@ -1,4 +1,4 @@
-const num = 3;
+/*const num = 3;
 
 if(null == 0){
     console.log(`O numero ${num} nao e primo`);
@@ -48,3 +48,19 @@ function invert_array(array){
 }
 let numero = [1,2,3,4,5,6,7];
 invert_array(numero);
+*/
+
+function reverse(s) {
+    // Write code here
+   // let counter = s.length;
+    //while(counter < 0){
+      //  consle.log(s[counter]);
+        //counter--;
+    //}
+    let reserva = '';
+    for(let counter = s.length -1; counter > 0;counter--){
+            reserva += s[counter];
+    }
+    return reserva;
+}
+console.log(reverse('Hello'));
