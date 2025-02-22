@@ -1,7 +1,10 @@
 let str = 'asadegalinha1';
-let counter = str.length;
+let counter = str.length -1;
+let armazenar = "";
 
-while(counter < str.length[0]){
-	console.log(str[counter]);
+while(counter >= 0){
+	armazenar += str[counter];
 	counter--;
 }
+
+console.log(armazenar);
